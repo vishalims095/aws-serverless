@@ -1,0 +1,23 @@
+org: vishalims095
+app: aws-node-express-api-project
+service: RestApi
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize : 512
+  stage : production
+  timeout : 15
+  region: us-east-1
+  lambdaHashingVersion: 20201221
+
+functions:
+  api:
+    handler: lambda.universal
+    events:
+      - http : ANY /{proxy+}
+      - http: ANY /
+    environment : 
+      PORT : 3000
+      
