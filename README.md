@@ -4,3 +4,4 @@
 # Configuration
 ## npm i serverless --g
 ## serverless config credentials --provider aws --key "authkey" --secret 'secratekey'
+## npm i aws-serverless-express
